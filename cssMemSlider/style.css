@@ -1,0 +1,144 @@
+html {
+    font-size: 10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: gray;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+p {
+    color: white;
+    background-color: green;
+    font-family: 'Courier New', Courier, sans-serif;
+    font-size: 2rem;
+}
+.slider {
+    width: 107rem;
+    height: 67rem;
+    overflow: hidden;
+    border: 5% solid #fff;
+}
+
+.middle {
+margin-top: 5%;
+}
+
+
+.navigation {
+    transform: translate(90%,-99%);
+    display: flex;
+    width: 38rem;
+    justify-content: center;
+}
+
+.bar {
+    width: 6rem;
+    height: 3rem;
+    cursor: pointer;
+}
+.bar:active .bar1 {
+    background-color: #fff;
+}
+.bar:hover .bar1 {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.bar1 {
+    height: 0.8rem;
+    width: 3rem;
+    margin: 0.6rem;
+    cursor: pointer;
+    background-color: purple;
+    opacity: .7;
+    border-radius: 1rem;
+    transition: all .4s ease;
+}
+.bar1:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.bar1:active {
+    opacity: 1;
+    transform: scale(1.1);
+    background-color: #fff;
+}
+
+
+input[name='r'] {
+    display: none;
+}
+
+.slides {
+    width: 400%;
+    height: 96%;
+    display: flex;
+}
+
+
+.slide {
+    width: 25%;
+    transition: all .6s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#slide1:checked ~ .s1 {
+    margin-left: 0;
+}
+#silde2:checked ~ .navigation label{
+    background-color: black;
+}
+#slide2:checked ~ .s1 {
+    margin-left: -25%;
+    background-color: green;
+}
+
+#slide3:checked ~ .s1 {
+    margin-left: -50%;
+}
+#slide4:checked ~ .s1 {
+    margin-left: -75%;
+}
+
+
+@media (max-width: 400px) {
+    .middle {
+        margin-top: 79%;
+    }
+    .slider {
+        border: none;
+        width: 107rem;
+        height: 81rem;
+    }
+    .navigation {
+        width: 53rem;
+        transform: translate(-4%,-169%);
+    }
+    .bar {
+        width: 12.7rem;
+        height: 6.8rem;
+    }
+    .bar1 {
+        height: 2.5rem;
+        width: 8.2rem;
+    }
+    p {
+        margin-top: 5.2rem;
+        font-size: 5rem;
+    }
+    .slides {
+        height: 85%;
+    }
+}
